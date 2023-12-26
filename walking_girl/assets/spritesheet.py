@@ -1,4 +1,3 @@
-# spritesheet.py
 from importlib import resources
 import pygame
 

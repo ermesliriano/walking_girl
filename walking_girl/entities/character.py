@@ -1,6 +1,4 @@
-# character.py
 from walking_girl.config import cfg_item
-from walking_girl.spritesheet import SpriteSheet
 
 class Character:
     def __init__(self, sprite_sheet):

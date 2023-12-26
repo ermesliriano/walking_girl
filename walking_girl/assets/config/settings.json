@@ -7,9 +7,7 @@
         "font_name" : "Sansation.ttf",
         "sync" : {
             "fps" : 60,
-            "update_time" : 1000,
-            "fps_pos" : [0,0],
-            "fps_color" : [150, 150, 210]
+            "update_time" : 1000
         }
     },
     "entities" : {
@@ -17,6 +15,10 @@
             "walking_girl.assets.images",
             "walking_animation.png"
         ],
+        "spritesheet_structure": {
+            "columns": 10,
+            "rows": 2
+        },
         "frames_per_action": 9,
         "girl" : {
             "speed" : 100,
