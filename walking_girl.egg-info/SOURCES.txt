@@ -1,0 +1,8 @@
+setup.py
+walking_girl/__init__.py
+walking_girl/main.py
+walking_girl.egg-info/PKG-INFO
+walking_girl.egg-info/SOURCES.txt
+walking_girl.egg-info/dependency_links.txt
+walking_girl.egg-info/entry_points.txt
+walking_girl.egg-info/top_level.txt

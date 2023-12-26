@@ -1,0 +1,26 @@
+{
+    "animation" : {
+        "screen_size" : [640, 480],
+        "caption" : "The walking girl",
+        "bg_color" : [0, 0, 0],
+        "font_path" : "walking_girl.assets.fonts",
+        "font_name" : "Sansation.ttf",
+        "sync" : {
+            "fps" : 60,
+            "update_time" : 1000,
+            "fps_pos" : [0,0],
+            "fps_color" : [150, 150, 210]
+        }
+    },
+    "entities" : {
+        "spritesheet_path": [
+            "walking_girl.assets.images",
+            "walking_animation.png"
+        ],
+        "frames_per_action": 9,
+        "girl" : {
+            "speed" : 100,
+            "smooth" : 5
+        }        
+    }
+}

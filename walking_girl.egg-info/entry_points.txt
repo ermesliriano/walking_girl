@@ -1,0 +1,2 @@
+[console_scripts]
+walking-girl = walking_girl.__main__:main
