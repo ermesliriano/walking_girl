@@ -23,6 +23,10 @@
         "girl" : {
             "speed" : 100,
             "smooth" : 5
-        }        
+        }, 
+        "sound_path": [
+            "walking_girl.assets.sounds",
+            "wood-step-sample.mp3"
+        ]
     }
 }

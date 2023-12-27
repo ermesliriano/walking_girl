@@ -1,3 +1,6 @@
+from importlib import resources
+import pygame
+
 from walking_girl.config import cfg_item
 
 class Character:
@@ -15,11 +18,17 @@ class Character:
         self.walk_left = [self.sprite_sheet.get_image(1, i) for i in range(1, self.frames_per_action + 1)]
         self.stand_frame_right = self.sprite_sheet.get_image(0, 0)
         self.stand_frame_left = self.sprite_sheet.get_image(1, 0)
+        self.sound_path = cfg_item("entities", "sound_path")
+        self.sound_played = False
+        pygame.mixer.init()
+        with resources.path(self.sound_path[0], self.sound_path[1]) as sound_filename:
+            self.step_sound = pygame.mixer.Sound(sound_filename)
 
     def update(self, delta_time):
         self.x_pos += self.speed * delta_time if self.direction == 'right' else -self.speed * delta_time
         if (self.smooth == cfg_item("entities", "girl", "smooth")):
             self.frame += 1
+            self.sound_played = False
             self.smooth = 0
         else:
             self.smooth += 1
@@ -32,6 +41,10 @@ class Character:
         elif self.x_pos + self.sprite_sheet.frame_width >= self.screen_width and self.direction == 'right':
             self.direction = 'left'
             self.x_pos = self.screen_width - self.sprite_sheet.frame_width
+
+        if (((self.frame == 3) or (self.frame == 7)) and (self.sound_played == False)):
+            self.step_sound.play()
+            self.sound_played = True
 
     def draw(self, screen):
         if self.direction == 'right':
