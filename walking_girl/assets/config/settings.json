@@ -3,8 +3,6 @@
         "screen_size" : [640, 480],
         "caption" : "The walking girl",
         "bg_color" : [0, 0, 0],
-        "font_path" : "walking_girl.assets.fonts",
-        "font_name" : "Sansation.ttf",
         "sync" : {
             "fps" : 60,
             "update_time" : 1000
@@ -26,7 +24,7 @@
         }, 
         "sound_path": [
             "walking_girl.assets.sounds",
-            "wood-step-sample.mp3"
+            "single-footstep.mp3"
         ]
     }
 }

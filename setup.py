@@ -4,7 +4,7 @@ setup(
     name='walking-girl',
     version='0.1.0',
     packages=['walking_girl'],
-    install_requires=["pygame","importlib"],
+    install_requires=["pygame","importlib", "pydub"],
     entry_points={
         'console_scripts': [
             'walking-girl = walking_girl.__main__:main'
